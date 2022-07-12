@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             x:Class="TabedPageDemo.Pages.DiscoverPage"
+             Title="Hey Josh">
+<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,0">
+<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,20,0,0" VerticalScrollBarVisibility="Default">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+    <StackLayout HorizontalOptions="FillAndExpand" Grid.Row="0"
+             Orientation="Horizontal"  BackgroundColor="#F5F5F5">
+            <BoxView Color="#ccbfbe" HeightRequest="0.1"></BoxView>
+            <Label Text="General" TextColor="Black" FontSize="20" Padding="10,0,0,0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"></Label>
+            <Image Source="dotnet_bot.png" HeightRequest="25" Margin="0,0,20,0"  HorizontalOptions="EndAndExpand"></Image>
+        </StackLayout>
+                 <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="white" RowSpacing="20" Padding="20,10,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text= "WaterSupply" FontSize="12" TextColor="Black" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"></Label>
+                    <Label Text="Public" TextColor="Black" FontAttributes="Bold" FontSize="16" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"></Label>
+
+                    <Label Text="Sewage" FontSize="12" TextColor="Black" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start"></Label>
+                    <Label Text="Public" TextColor="Black" FontSize="16" FontAttributes="Bold" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"></Label>
+
+                    <Label Text="WIERS Number" TextColor="Black" FontSize="12" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Start"></Label>
+                    <Label Text="702AUS0001462" TextColor="Black" FontAttributes="Bold" FontSize="16" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"></Label>
+
+                    <Label Text="Number Of Vendors" TextColor="Black" FontSize="12" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Start"></Label>
+                    <Label Text="1" TextColor="Black" FontSize="16" FontAttributes="Bold" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"></Label>
+
+                    <Label Text="Exempt Reason" TextColor="Black" FontSize="12" Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Start"></Label>
+                    <Label Text="Non-Exempt" TextColor="Black" FontAttributes="Bold" FontSize="16" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"></Label>
+                </Grid>
+            </Grid>
+            </ScrollView>
+        <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand" BackgroundColor="#F5F5F5" Orientation="Vertical" HeightRequest="50">
+            <BoxView Color="#ccbfbe" HeightRequest="0.1"></BoxView>
+            <Button Text="Begin Inspection" TextColor="white" Command="{Binding BeginInspectionCommand}" BackgroundColor="Blue" CornerRadius="5" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand"></Button>
+        </StackLayout>
+  </StackLayout>
+</ContentPage>
