@@ -2,7 +2,7 @@
 using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 
 namespace TabedPageDemo.Pages;
-public partial class CategoryPage : Microsoft.Maui.Controls.TabbedPage
+public partial class CategoryPage : Shell
 {
 	public CategoryPage()
 	{
